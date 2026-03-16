@@ -2,15 +2,13 @@
 
 **Author:** Bhavya Sevak — M.S. Biomedical Informatics, Arizona State University  
 **Dataset:** Wisconsin Breast Cancer Dataset (UCI / sklearn)  
-**Status:** Complete
+**Live Demo:** [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app.streamlit.app)
 
 ---
 
 ## Overview
 
-This project builds a machine learning pipeline to classify breast cancer tumors as **malignant or benign** based on 30 cell nucleus features extracted from digitized fine needle aspirate (FNA) biopsy images.
-
-The project demonstrates a full biomedical data science workflow — from exploratory analysis to model evaluation and biomarker identification — directly relevant to clinical decision support and cancer research.
+A full machine learning pipeline to classify breast cancer tumors as **malignant or benign** using 30 cell nucleus features from digitized FNA biopsy images — plus an interactive Streamlit dashboard with SHAP explainability.
 
 ---
 
@@ -22,7 +20,17 @@ The project demonstrates a full biomedical data science workflow — from explor
 | Random Forest | ~96% | ~0.995 |
 | SVM | ~98% | ~0.998 |
 
-**Top identified biomarkers:** worst radius, worst perimeter, mean concave points
+**Top biomarkers identified:** worst radius, worst perimeter, mean concave points
+
+---
+
+## Features
+
+- 📊 **Interactive EDA** — class distribution, boxplots, correlation heatmap
+- 🤖 **3 ML Models** — Logistic Regression, Random Forest, SVM
+- 📈 **Evaluation** — ROC curves, confusion matrices, classification reports
+- 🔍 **SHAP Explainability** — summary plots, waterfall charts, per-sample explanations
+- 🎛️ **Live Predictor** — adjust sliders, get real-time predictions with confidence scores
 
 ---
 
@@ -31,74 +39,48 @@ The project demonstrates a full biomedical data science workflow — from explor
 ```
 breast-cancer-classifier/
 │
-├── breast_cancer_classifier.ipynb   # Main analysis notebook
-├── requirements.txt                 # Python dependencies
-├── README.md                        # This file
+├── app.py                           # Streamlit dashboard
+├── breast_cancer_classifier.ipynb   # Full analysis notebook (with SHAP)
+├── requirements.txt                 # Dependencies
+├── README.md
 └── plots/                           # Auto-generated visualizations
-    ├── class_distribution.png
-    ├── feature_boxplots.png
-    ├── correlation_heatmap.png
-    ├── confusion_matrices.png
-    ├── roc_curves.png
-    ├── feature_importance.png
-    └── lr_coefficients.png
 ```
 
 ---
 
-## Notebook Contents
+## Run Locally
 
-1. **Data Loading & Exploration** — dataset shape, class balance, summary stats
-2. **EDA** — boxplots, correlation heatmap, feature distributions
-3. **Preprocessing** — StandardScaler, stratified train/test split
-4. **Model Training** — Logistic Regression, Random Forest, SVM via sklearn Pipelines
-5. **Evaluation** — confusion matrices, ROC curves, 5-fold cross-validation
-6. **Biomarker Identification** — feature importances + logistic regression coefficients
-7. **Conclusions** — clinical relevance and future directions
-
----
-
-## How to Run
-
-### Option 1 — Local
 ```bash
 git clone https://github.com/bsevakstark/breast-cancer-classifier.git
 cd breast-cancer-classifier
 pip install -r requirements.txt
+
+# Run dashboard
+streamlit run app.py
+
+# Or open notebook
 jupyter notebook breast_cancer_classifier.ipynb
 ```
 
-### Option 2 — Google Colab (no install needed)
-Click the badge below to open directly in Colab:
+## Deploy on Streamlit Cloud (free)
+
+1. Push repo to GitHub
+2. Go to [share.streamlit.io](https://share.streamlit.io)
+3. Connect your GitHub repo → select `app.py` → Deploy
+4. Get a shareable link in ~2 minutes!
+
+---
+
+## Open in Colab
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bsevakstark/breast-cancer-classifier/blob/main/breast_cancer_classifier.ipynb)
 
 ---
 
-## Dataset
-
-- **Source:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29)
-- **Samples:** 569 (357 benign, 212 malignant)
-- **Features:** 30 numeric features (radius, texture, perimeter, area, smoothness, etc.)
-- **Built into sklearn:** `from sklearn.datasets import load_breast_cancer`
-
----
-
 ## Skills Demonstrated
 
-- Python (pandas, numpy, matplotlib, seaborn)
-- Machine learning (scikit-learn Pipelines)
-- Biomedical data analysis
-- Cross-validation & model evaluation
-- Feature importance & biomarker discovery
-- Data visualization
+`Python` `scikit-learn` `SHAP` `Streamlit` `pandas` `matplotlib` `seaborn` `Jupyter` `Machine Learning` `Explainable AI` `Biomarker Discovery`
 
 ---
 
-## Connection to Research
-
-This project mirrors the analytical workflow used in my mGWAS research on gallstone disease at ASU — feature selection, statistical modeling, and biomarker identification from biological datasets.
-
----
-
-*Part of my biomedical informatics portfolio: [bsevakstark.github.io](https://bsevakstark.github.io)*
+*Part of my portfolio: [bsevakstark.github.io](https://bsevakstark.github.io)*
