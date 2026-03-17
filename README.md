@@ -62,20 +62,8 @@ streamlit run app.py
 jupyter notebook breast_cancer_classifier.ipynb
 ```
 
-## Deploy on Streamlit Cloud (free)
 
-1. Push repo to GitHub
-2. Go to [share.streamlit.io](https://share.streamlit.io)
-3. Connect your GitHub repo → select `app.py` → Deploy
-4. Get a shareable link in ~2 minutes!
 
----
-
-## Open in Colab
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bsevakstark/breast-cancer-classifier/blob/main/breast_cancer_classifier.ipynb)
-
----
 
 ## Skills Demonstrated
 
