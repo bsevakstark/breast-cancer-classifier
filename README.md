@@ -45,26 +45,6 @@ breast-cancer-classifier/
 ├── README.md
 └── plots/                           # Auto-generated visualizations
 ```
-
----
-
-## Run Locally
-
-```bash
-git clone https://github.com/bsevakstark/breast-cancer-classifier.git
-cd breast-cancer-classifier
-pip install -r requirements.txt
-
-# Run dashboard
-streamlit run app.py
-
-# Or open notebook
-jupyter notebook breast_cancer_classifier.ipynb
-```
-
-
-
-
 ## Skills Demonstrated
 
 `Python` `scikit-learn` `SHAP` `Streamlit` `pandas` `matplotlib` `seaborn` `Jupyter` `Machine Learning` `Explainable AI` `Biomarker Discovery`
